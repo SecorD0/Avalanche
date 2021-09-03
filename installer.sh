@@ -9,7 +9,7 @@ sudo apt update
 sudo apt install wget -y
 . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
 sudo apt upgrade -y
-sudo apt install curl jq pkg-config build-essential libssl-dev -y
+sudo apt install jq pkg-config build-essential libssl-dev -y
 cd
 wget "https://github.com/ava-labs/avalanchego/releases/download/v$avalanchego_version/avalanchego-linux-amd64-v$avalanchego_version.tar.gz"
 tar -xvf "avalanchego-linux-amd64-v$avalanchego_version.tar.gz"
