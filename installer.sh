@@ -1,9 +1,9 @@
 # $1 - Avalanche node version
 #!/bin/bash
 if [ -n "$1" ]; then
-	avalanchego_version=$1
+	avalanche_version=$1
 else
-	avalanchego_version="1.5.2"
+	avalanche_version="1.5.2"
 fi
 sudo apt update
 sudo apt install wget -y
@@ -11,9 +11,9 @@ sudo apt install wget -y
 sudo apt upgrade -y
 sudo apt install jq pkg-config build-essential libssl-dev -y
 cd
-wget "https://github.com/ava-labs/avalanchego/releases/download/v$avalanchego_version/avalanchego-linux-amd64-v$avalanchego_version.tar.gz"
-tar -xvf "avalanchego-linux-amd64-v$avalanchego_version.tar.gz"
-rm "avalanchego-linux-amd64-v$avalanchego_version.tar.gz"
+wget "https://github.com/ava-labs/avalanchego/releases/download/v${avalanche_version}/avalanchego-linux-amd64-v${avalanche_version}.tar.gz"
+tar -xvf "avalanchego-linux-amd64-v${avalanche_version}.tar.gz"
+rm "avalanchego-linux-amd64-v${avalanche_version}.tar.gz"
 chmod +x $HOME$(find / -name "avalanchego*" -type d -printf '/%f')/avalanchego
 sudo tee <<EOF >/dev/null /etc/systemd/system/avalanchd.service
 [Unit]
