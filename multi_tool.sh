@@ -15,7 +15,7 @@ while test $# -gt 0; do
 		echo -e "  -h, --help  show the help page"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/SecorD0/Avalanche/blob/main/installer.sh - script URL"
+		echo -e "https://github.com/SecorD0/Avalanche/blob/main/multi_tool.sh - script URL"
 		echo -e "https://t.me/letskynode — node Community"
 		echo
 		return 0
@@ -59,7 +59,7 @@ EOF
 sudo systemctl enable avalanched
 sudo systemctl daemon-reload
 sudo systemctl restart avalanched
-. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/insert_variable.sh) -n "avalanche_log" -v "sudo journalctl -f -n 100 -u avalanched" -a
+. <wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/miscellaneous/insert_variable.sh) -n "avalanche_log" -v "sudo journalctl -f -n 100 -u avalanched" -a
 echo -e "${C_LGn}Done!${RES}"
 . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
 echo -e "\nThe node was ${C_LGn}started${RES}.\n\n"
