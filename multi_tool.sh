@@ -59,7 +59,7 @@ EOF
 sudo systemctl enable avalanched
 sudo systemctl daemon-reload
 sudo systemctl restart avalanched
-. <wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/miscellaneous/insert_variable.sh) -n "avalanche_log" -v "sudo journalctl -f -n 100 -u avalanched" -a
+. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/miscellaneous/insert_variable.sh) -n "avalanche_log" -v "sudo journalctl -f -n 100 -u avalanched" -a
 echo -e "${C_LGn}Done!${RES}"
 . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
 echo -e "\nThe node was ${C_LGn}started${RES}.\n\n"
