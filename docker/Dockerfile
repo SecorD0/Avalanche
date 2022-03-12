@@ -11,7 +11,7 @@ RUN apt update && \
     apt upgrade -y && \
     apt install wget jq -y; \
     apt clean; \
-	chmod +x entrypoint.sh
+    chmod +x entrypoint.sh
 
 EXPOSE 9650 9651
 
